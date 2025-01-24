@@ -1,0 +1,9 @@
+spring.application.name: aspect
+
+spring:
+  cache:
+    type: caffeine
+    cache-names: tool
+    caffeine:
+      specs:
+        tool: 'initialCapacity=20,expireAfterWrite=20s'

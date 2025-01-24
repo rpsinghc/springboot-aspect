@@ -1,0 +1,21 @@
+<!DOCTYPE aspectj PUBLIC
+        "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+
+    <weaver options="-verbose -showWeaveInfo">
+
+        <include within="com.example.aop.example.*"/>
+        <include within="com.example.aspect.*"/>
+        <include within="com.example.aspect.AspectO"/>
+        <include within="org.springframework.cache.interceptor.CacheInterceptor"/>
+        <include within="org.springframework.cache.interceptor.AbstractCacheInvoker"/>
+
+    </weaver>
+
+    <aspects>
+
+        <aspect name="com.example.aspect.AspectO"/>
+
+    </aspects>
+
+</aspectj>
